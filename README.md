@@ -1,6 +1,6 @@
 ## Hello react-sign!
 
-简单轻量的图片上传 + 裁切 + 压缩 组件, 不依赖antd / element等第三方UI, 快速实现图片处理相关操作.
+简单轻量的电子签名组件, 轻松定制可扩展的电子签名.
 
 ### Install | 安装
 
@@ -11,14 +11,29 @@ yarn add react-sign
 ### Use | 使用
 
 ```js
+import React from 'react';
+import Editor from 'h5-dooring/Editor';
 import Sign from 'react-sign';
 
-export default () => 
-  <Sign 
-    defaultImg="" 
-    onChange={(file) => console.log(file)} 
-    onDel={(image) => console.log('remove', image)} 
-  />;
+export default () => {
+  const config = {
+    width: 400,
+    height: 200,
+    lineWidth: 4,
+    strokeColor: 'red',
+    lineCap: 'round',
+    lineJoin: 'round',
+    bgColor: 'transparent',
+    showBtn: true
+  }
+  return (
+    <Editor initValue={config}>
+      {(config) => {
+        return <Sign {...config} onDrawEnd={(c) => console.log(c)} />;
+      }}
+    </Editor>
+  );
+};
 ```
 
 ### 演示 | Demo
