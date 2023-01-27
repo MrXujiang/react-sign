@@ -1,11 +1,11 @@
-## Hello react-sign!
+## Hello react-sign2!
 
 简单轻量的电子签名组件, 轻松定制可扩展的电子签名.
 
 ### Install | 安装
 
 ```bash
-yarn add react-sign
+yarn add react-sign2
 ```
 
 ### Use | 使用
@@ -13,7 +13,7 @@ yarn add react-sign
 ```js
 import React from 'react';
 import Editor from 'h5-dooring/Editor';
-import Sign from 'react-sign';
+import Sign from 'react-sign2';
 
 export default () => {
   const config = {

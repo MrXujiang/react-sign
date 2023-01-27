@@ -5,13 +5,13 @@
 ### Install | 安装
 
 ```bash
-yarn add react-sign
+yarn add react-sign2
 ```
 
 ### Use | 使用
 
 ```js
-import Sign from 'react-sign';
+import Sign from 'react-sign2';
 
 export default () => 
   <Sign 
