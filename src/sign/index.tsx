@@ -134,7 +134,7 @@ const Sign: React.FC<IProp> = ({
     window.addEventListener(mobileStatus ? "touchstart" : "mousedown", init);
     // 创建鼠标/手势 弹起/离开 监听器
     window.addEventListener(mobileStatus ? "touchend" : "mouseup", closeDraw);
-  }, [])
+  }, [width, height, lineWidth, strokeColor, lineCap, lineJoin, bgColor, onDrawEnd])
   return (
     <div className="xi-sign-wrap" style={{width, height}}>
         <canvas ref={canvasRef}></canvas>
